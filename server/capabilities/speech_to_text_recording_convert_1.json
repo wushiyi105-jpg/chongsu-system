@@ -29,7 +29,8 @@
     "audioUrl": "{{input.audio_file}}",
     "language": "{{input.language}}"
   },
-  "createdAt": 1790658721592,
-  "updatedAt": 1790658721592,
-  "createdBy": 7676298620236352487
+  "createdAt": 0,
+  "updatedAt": 0,
+  "createdBy": 0,
+  "_note": "平台元数据（时间戳/创建者）已在开源时脱敏"
 }

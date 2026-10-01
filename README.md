@@ -97,7 +97,7 @@ npm run dev:server   # 后端: http://localhost:3000
 | 变量名 | 说明 | 默认值 | 必填 |
 |--------|------|--------|------|
 | `DATABASE_URL` | PostgreSQL 连接串 | - | ✅ |
-| `JWT_SECRET` | JWT 签名密钥（生产环境务必修改） | `chongsu-system-dev-secret-key` | ⚠️ |
+| `JWT_SECRET` | JWT 签名密钥（生产环境务必修改） | `insecure-dev-secret-change-me` | ⚠️ |
 | `JWT_EXPIRES_IN` | Token 有效期 | `30d` | - |
 | `LOGIN_CODE` | 开发模式万能登录码（留空则关闭） | - | - |
 | `TIKHUB_API_KEY` | TikHub API Key（抖音链接解析，可选） | - | - |

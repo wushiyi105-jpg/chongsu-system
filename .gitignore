@@ -1,0 +1,69 @@
+# 依赖
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# 构建产物
+dist/
+build/
+.output/
+.nuxt/
+.next/
+.svelte-kit/
+
+# 环境变量（敏感！切勿提交）
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# 日志
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 编辑器 / IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 测试 / 覆盖率
+coverage/
+*.lcov
+.nyc_output/
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.bak
+
+# 类型构建缓存
+*.tsbuildinfo
+
+# 缓存
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.turbo/
+
+# ===== mobile (Capacitor) =====
+mobile/node_modules/
+mobile/android/.gradle/
+mobile/android/**/build/
+mobile/android/app/build/
+mobile/android/local.properties
+mobile/android/.cxx/

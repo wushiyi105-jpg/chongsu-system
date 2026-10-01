@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <title>重塑系统</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#f2f2f0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="重塑系统">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script>
+    try {
+      window.__platform__ = JSON.parse('{{{__platform__}}}');
+    } catch (e) {
+      console.error('Failed to parse __platform__', e);
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/client/src/index.tsx"></script>
+  <script>
+    (function () {
+      if (!('serviceWorker' in navigator)) return;
+      // Capacitor WebView（APK）环境下不注册 Service Worker
+      // Android 系统「清除缓存」不会清 SW 缓存，会导致一直跑旧代码
+      var ua = navigator.userAgent || '';
+      var isCapacitor = !!(window.Capacitor && window.Capacitor.isNative) ||
+        ua.indexOf('Capacitor') !== -1 ||
+        ua.indexOf('; wv)') !== -1;
+      if (isCapacitor) return;
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').catch(function (err) {
+          console.error('SW registration failed:', err);
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>

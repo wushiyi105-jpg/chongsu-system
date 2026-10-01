@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+@import '@lark-apaas/client-toolkit/lib/index.css';
+@import "tw-animate-css";
+@import "./tailwind-theme.css";
+@import "./typography.css";
+@import "./pwa.css";
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "tnum", "cv11", "ss01";
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+num, .num, .kpi-num, table td.num, table th.num {
+  font-feature-settings: "tnum", "lnum";
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+@config "../../tailwind.config.ts";

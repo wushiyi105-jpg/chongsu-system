@@ -1,0 +1,39 @@
+{
+  "appId": "com.chongsuxi.app",
+  "appName": "重塑系统",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "https://your-app.example.com/",
+    "cleartext": false,
+    "androidScheme": "https",
+    "allowNavigation": [
+      "*.example.com"
+    ]
+  },
+  "android": {
+    "allowMixedContent": false,
+    "webContentsDebuggingEnabled": false,
+    "captureInput": true,
+    "zoomEnabled": false
+  },
+  "backgroundColor": "#f2f2f0",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "launchAutoHide": true,
+      "backgroundColor": "#f2f2f0",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false,
+      "splashFullScreen": true,
+      "splashImmersive": true,
+      "splashInvertedDisplayMode": "normal"
+    },
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#f2f2f0",
+      "overlaysWebView": true
+    }
+  }
+}

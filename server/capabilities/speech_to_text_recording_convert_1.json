@@ -1,0 +1,35 @@
+{
+  "id": "speech_to_text_recording_convert_1",
+  "pluginKey": "@official-plugins/speech-file-to-text",
+  "pluginVersion": "1.0.15",
+  "name": "用户录音音频转文字",
+  "description": "将用户上传的录音音频文件转换为文字内容，支持多种语言识别",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "audio_file": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array",
+        "format": "plugin-file-url",
+        "description": "待识别的音频文件，支持wav、mp3、ogg格式"
+      },
+      "language": {
+        "type": "string",
+        "description": "音频识别的语言，可选值：zh(中文)、en(英语)、ja(日语)、ko(韩语)、fr(法语)、es(西班牙语)、pt(葡萄牙语)、id(印尼语)、ru(俄语)、ms(马来语)，默认使用中文普通话"
+      }
+    },
+    "required": [
+      "audio_file"
+    ]
+  },
+  "formValue": {
+    "audioUrl": "{{input.audio_file}}",
+    "language": "{{input.language}}"
+  },
+  "createdAt": 1790658721592,
+  "updatedAt": 1790658721592,
+  "createdBy": 7676298620236352487
+}

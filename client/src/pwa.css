@@ -1,0 +1,30 @@
+/* PWA 相关样式：standalone 模式适配 + 安全区 */
+
+/* 独立模式下隐藏不必要的浏览器 UI 提示元素
+   并将顶部/底部内边距适配刘海屏与底部横条 */
+@media (display-mode: standalone) {
+  html,
+  body,
+  #root {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* standalone 模式下 body 禁止橡皮筋过度滚动，更像原生 App */
+  body {
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* iOS 全屏模式同样适配 */
+@supports (-webkit-touch-callout: none) {
+  html,
+  body,
+  #root {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
